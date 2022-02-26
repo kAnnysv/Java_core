@@ -15,7 +15,7 @@ public class Box < T extends Fruit> {
     }
 
     public Float getWeightList(){
-        Float result = Float.valueOf(0);
+        Float result = 0.0f;
         for(T t: getFruitList()) {
             if(t != null) {
                 Float value = t.getWeight();
@@ -25,7 +25,7 @@ public class Box < T extends Fruit> {
         return result;
     }
 
-    public Boolean compareList(Box<T> box){
+    public Boolean compareList(Box box){
         if(this.getWeightList().floatValue() == box.getWeightList().floatValue()) return true;
          return false;
 
@@ -34,7 +34,7 @@ public class Box < T extends Fruit> {
     public void toEmptyList(Box<T> box){
         System.out.println("Текущая коробка до : " + this.getWeightList());
         System.out.println("Другая коробка до : " + box.getWeightList() );
-        for (T t: getFruitList()
+        for (T t: box.getFruitList()
              ) { this.getFruitList().add(t);
 
         }

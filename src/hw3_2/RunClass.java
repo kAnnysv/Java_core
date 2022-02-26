@@ -35,7 +35,7 @@ public class RunClass {
         System.out.println(box1.getWeightList());
         System.out.println(box2.getWeightList());
         System.out.println(box1.compareList(box2));
-        box1.toEmptyList(box2);
+         box1.toEmptyList(box2);
 //        toEmpty выдает ConcurrentModificationException
 
         ArrayList<Orange> orangeArrayList = new ArrayList<>(10);
@@ -56,8 +56,8 @@ public class RunClass {
 
 
         Box<Orange> box3 = new Box<>(orangeArrayList);
-//        System.out.println(box3.compareList(box1));
-// Сравнение ящиков апл и оранж не проходит. Просит привести к одному типу
+       System.out.println(box3.compareList(box1));
+
         System.out.println(box3.getWeightList());
 
 
